@@ -1,0 +1,13 @@
+try:
+ number = int(input("Введите цело, положительное число "))
+
+ if number > 0:
+     while number >= 0:
+         print("Число ", number)
+         number -=1
+ else:
+
+     print("Число меньше или равно 0, попробуйте позже)")
+     
+except ValueError:
+       print("Ошибка: введено не число!")
