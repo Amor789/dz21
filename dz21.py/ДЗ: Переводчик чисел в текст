@@ -1,5 +1,6 @@
 try:
     number = int(input("Введите число в диапазоне от 1 до 5: "))
+    
     if number == 1:
       print("Соответствующее слово: One")
     elif number == 2:
@@ -12,5 +13,6 @@ try:
       print("Соответствующее слово: Five")
     else:
       print("Вы не попали в диапазон от 1 до 5, попробуйте позже")
+        
 except ValueError:
        print("Ошибка: введено не число!")
