@@ -1,0 +1,11 @@
+import random
+
+col1 = int(input("Введи размер строк: "))
+
+num_1 = [random.randint(1, 100) for i in range(col1)]
+num_2 = [random.randint(1, 100) for i in range(col1)]
+num_3 = [num_1[i] + num_2[i] for i in range(col1)]
+
+print(num_1)
+print(num_2)
+print(num_3)
