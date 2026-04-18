@@ -1,0 +1,17 @@
+my_list = []
+change_1 = [None,None]
+
+for i in range(5):
+    slov = str(input("Введите слово: "))
+    my_list.append(slov)
+print(my_list)
+
+change_1 [0] = my_list [0]
+change_1 [1] = my_list [4]
+
+my_list.pop(0)
+my_list.pop(3)
+
+my_list.insert(0, change_1[1])
+my_list.append( change_1[0])
+print(my_list)
