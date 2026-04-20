@@ -4,11 +4,17 @@ try:
          return a
       else:
          return b
+
+
     def empty_function():
        pass
+
+
     def even_numbers(n):
         for i in range(0, n + 1, 2):
           yield i
+
+
     def test_max_number():
         assert max_number(34, 12) == 34, "Ошибка: 34 должно быть больше 12"
         assert max_number(1, 12) == 12, "Ошибка: 12 должно быть больше 1"
@@ -18,6 +24,7 @@ try:
         assert max_number(0, 0) == 0, "Ошибка: при равенстве возвращается 0"
         print("Все тесты пройдены!")
 
+
     a = int(input("Введите первое число: "))
     b = int(input("Введите второе число: "))
     n = int(input("Введите число для генерации всех четных чисел: "))
@@ -25,7 +32,9 @@ try:
     test_max_number()
     print("Наибольшее число из выбранных: ", max_number(a, b))
     print("Четные числа ниже: ")
+
     for num in even_numbers(int(n)):
       print(num)
+
 except ValueError:
        print("Ошибка: введено не число!")
