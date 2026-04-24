@@ -3,12 +3,12 @@ try:
 except ValueError:
     print("Ошибка: введено не число!")
 
-number_dict ={
-    "1" : " One",
-    "2" : " Two",
-    "3" : " Three",
-    "4" : " Four",
-    "5" : " Five"
+number_dict = {
+    "1": " One",
+    "2": " Two",
+    "3": " Three",
+    "4": " Four",
+    "5": " Five"
 }
 
 if number == 1:
