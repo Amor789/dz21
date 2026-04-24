@@ -2,9 +2,11 @@ def words(text):
     words = [word for word in text.split() if word]
     return len(words)
 
+
 def max_len(text):
     words = text.split()
     return max(words, key=len)
+
 
 def glass_t(text):
     slov = set('аеёиоуыэюя')
@@ -14,10 +16,12 @@ def glass_t(text):
             count +=1
     return count
 
+
 def double_t(text):
     words = text.lower().split()
     word_count = {}
 
+    
     for word in words:
         if word in word_count:
             word_count[word] += 1
