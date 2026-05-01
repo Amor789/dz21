@@ -1,10 +1,10 @@
 password = "ama_1234_10"
 
-while True:
-    pas2 = str(input("Введите пароль: "))
+while 1 == 1:
+    password_2 = str(input("Введите пароль: "))
 
-    if pas2 == password:
-        print("Вернвый пароль!")
+    if password_2 == password:
+        print("Верный пароль!")
         break
-    else:
-        print("Не верный пароль, попробуйте ещё раз")
+
+    print("Не верный пароль, попробуйте ещё раз")
