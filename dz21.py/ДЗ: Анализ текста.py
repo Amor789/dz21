@@ -1,10 +1,18 @@
+import string
+
 def words(text):
-    words = [word for word in text.split() if word]
+    cleaned_text = text.translate(str.maketrans('', '', string.punctuation))
+    words = [word for word in cleaned_text.split() if word]
     return len(words)
 
 
 def max_len(text):
-    words = text.split()
+    cleaned_text = text.translate(str.maketrans('', '', string.punctuation))
+    words = cleaned_text.split()
+
+    if not words:
+        return ""
+
     return max(words, key=len)
 
 
@@ -18,10 +26,11 @@ def glass_t(text):
 
 
 def double_t(text):
-    words = text.lower().split()
+    cleaned_text = text.translate(str.maketrans('', '', string.punctuation))
+    words = cleaned_text.lower().split()
     word_count = {}
 
-    
+
     for word in words:
         if word in word_count:
             word_count[word] += 1
@@ -30,7 +39,8 @@ def double_t(text):
 
     return word_count
 
-poem = input("Введите текс для анализа: ")
+
+poem = input("Введите текст для анализа: ")
 
 print(f"Количество слов в тексте {words(poem)}")
 print(f"Самое длинное слово в тексте {max_len(poem)}")
