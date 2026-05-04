@@ -1,12 +1,14 @@
 import string
 
-def words(text):
+#колличество слов в тексте
+def number_of_words_in_the_text(text):
     cleaned_text = text.translate(str.maketrans('', '', string.punctuation))
     words = [word for word in cleaned_text.split() if word]
     return len(words)
 
 
-def max_len(text):
+#Самое длинное слово в тексте
+def the_longest_word_in_the_text(text):
     cleaned_text = text.translate(str.maketrans('', '', string.punctuation))
     words = cleaned_text.split()
 
@@ -16,7 +18,8 @@ def max_len(text):
     return max(words, key=len)
 
 
-def glass_t(text):
+#Количество гласных в тексте
+def number_of_vowels_in_the_text(text):
     slov = set('аеёиоуыэюя')
     count = 0
     for i in text.lower():
@@ -25,7 +28,8 @@ def glass_t(text):
     return count
 
 
-def double_t(text):
+#Слова и их повторение
+def words_and_their_repetition(text):
     cleaned_text = text.translate(str.maketrans('', '', string.punctuation))
     words = cleaned_text.lower().split()
     word_count = {}
@@ -40,9 +44,10 @@ def double_t(text):
     return word_count
 
 
-poem = input("Введите текст для анализа: ")
+user_text = input("Введите текст для анализа: ")
 
-print(f"Количество слов в тексте {words(poem)}")
-print(f"Самое длинное слово в тексте {max_len(poem)}")
-print(f"Количество гласных в тексте {glass_t(poem)}")
+print(f"Количество слов в тексте {number_of_words_in_the_text(user_text)}")
+print(f"Самое длинное слово в тексте {the_longest_word_in_the_text(user_text)}")
+print(f"Количество гласных в тексте {number_of_vowels_in_the_text(user_text)}")
+print(f"Слова и их повторение {words_and_their_repetition(user_text)}")(poem)}")
 print(f"Слова и их повторение {double_t(poem)}")
