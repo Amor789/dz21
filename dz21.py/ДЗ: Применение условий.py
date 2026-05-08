@@ -1,13 +1,14 @@
-def to_get_the_sum_of_all_numbers(sum_of_even_numbers):
-    data = [i for i in range(0, 101) if i % 2 == 0]
+def get_the_sum_of_all_odd_numbers():
+    sum_of_even_numbers = 0
+    data = [i for i in range(0, 101, 2)]
     for i in data:
         sum_of_even_numbers += i
-    print(f"Сумма всех четных чисел от 1 до 100: {sum_of_even_numbers}")
+    return sum_of_even_numbers
 
 
 def get_the_square_of_odd_numbers():
     the_square_of_odd_numbers = [i * i for i in range(1, 10, 2)]
-    print(f"Квадраты всех нечетных чисел от 1 до 10: {the_square_of_odd_numbers}")
+    return the_square_of_odd_numbers
 
 
 def get_the_number_of_entered_numbers(entered_numbers):
@@ -18,14 +19,13 @@ def get_the_number_of_entered_numbers(entered_numbers):
             entered_numbers.append(number)
         except ValueError:
             print("Ошибка! Пожалуйста, введите корректное число.")
-    print(f"Количество введённых чисел: {entered_numbers}")
+    return entered_numbers
 
 
-sum_of_even_numbers = 0
 entered_numbers = []
 
-to_get_the_sum_of_all_numbers(sum_of_even_numbers)
-get_the_square_of_odd_numbers()
+print(f"Сумма всех четных чисел от 1 до 100: {get_the_sum_of_all_odd_numbers()}")
+print(f"Квадраты всех нечетных чисел от 1 до 10: {get_the_square_of_odd_numbers()}")
 
 print("Введите числа. Для завершения введите отрицательное число.")
-get_the_number_of_entered_numbers(entered_numbers)
+print(f"Количество введённых чисел: {get_the_number_of_entered_numbers(entered_numbers)}")
