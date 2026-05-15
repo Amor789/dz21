@@ -9,6 +9,6 @@ for i in range(5):
     main_list.append(word)
 print(main_list)
 
-main_list[4], main_list[0] = main_list[0],main_list[4]
+main_list[4], main_list[0] = main_list[0], main_list[4]
 
 print(main_list)
