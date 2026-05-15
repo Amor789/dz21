@@ -1,4 +1,4 @@
-import random
+from random import randint
 
 def get_the_final_list (list_one, list_two):
     final_list = max(len(first_list), len(second_list))
